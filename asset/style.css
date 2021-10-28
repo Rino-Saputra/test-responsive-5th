@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Lily+Script+One&family=Sora:wght@400;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+    color: #746a4d;
+    background-color: violet;
+    overflow-x: hidden;
+    background-image: linear-gradient(to top right,rgb(180, 218, 248),rgb(240, 221, 185));
+}
+/* default */
+.container {
+    margin: 1% 5%;
+    max-width: 1200px;
+    background-color: rgb(255, 251, 246);
+    padding: 1em 5%;
+    border-radius: 29px;
+    box-shadow: 2px 2px 26px rgb(182, 181, 181);
+    transition: 0.6s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #474230;
+}
+
+button {
+    cursor: pointer;
+}
+
+.img {
+    position: absolute;
+}
+
+.burger,.contrast {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+
+/*  */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5e563a;
+    font-weight: 850;
+    font-family: 'Acme', sans-serif;
+    transition: 0.8s ease;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.up {
+    transform: rotate(-90deg);
+    position: absolute;
+}
+
+.down {
+    transform: rotate(90deg);
+    margin: 10% 0 0 10%;
+    margin-right: 5%;
+}
+
+.icon img {
+    height: 1.6em;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 29%;
+}
+
+nav button {
+    padding: 0.5em 1.5em;
+    outline: none;
+    border-style: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid rgb(114, 109, 109);
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 0;
+}
+
+section .left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section .left .upper h1 {
+    font-size: 2.5rem;
+    color: rgb(52, 53, 54);
+}
+
+section .left .upper h1 span {
+    color: rgba(27, 59, 240, 0.705);
+}
+
+section .left .upper h4 {
+    width: 65%;
+}
+
+section .left button {
+    padding: 0.5em 2.9em;
+    border-radius: 10px;
+    background-color: transparent;
+    border-style: none;
+    border: 2.9px solid rgba(27, 59, 240, 0.705);
+    color: rgba(27, 59, 240, 0.705);
+    font-weight: 850;
+    margin-right: 5%;
+}
+
+section .left .dominant {
+    background-color: rgb(48, 76, 231);
+    color: white;
+}
+
+section .left .bottom {
+    display: flex;
+    line-height: 0.5em;
+    justify-content: space-between;
+}
+
+section .left .bottom h2 {
+    color: rgba(2, 2, 54, 0.774);
+}
+
+section .right {
+    width: 50%;
+    height: 80vh;
+    background-image: url(image/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 40px;
+    padding: 1.9em 1em;
+}
+
+section .right .text {
+    display: flex;
+    justify-content: space-between;
+    background-color:rgba(255,255,255,0.2);
+    margin-top: 80%;
+    border-radius: 20px;
+    padding: 0 2em;
+    color: rgb(218, 219, 219);
+    backdrop-filter: blur(9px);
+    box-shadow: 1px 1px 5px rgb(121, 119, 119);
+}
+
+section .right .text .left-t h4 span{
+    color: lightskyblue;
+}
+
+section .right .text .right-t h4 span{
+    color: lightskyblue;
+}
+
+nav ul li a:hover,nav button:hover {
+    color: rgb(226, 217, 195);
+}
+nav button:hover {
+    background-color: rgb(121, 64, 121);
+}
+
+.left .dominant:hover {
+    background-color:white;
+    color: rgb(48, 76, 231);
+}
+
+@media (min-width:1020px) and (max-width: 1100px){
+    section .right .text {
+        margin-top: 100%;
+    }
+}
+
+@media (min-width:760px) and (max-width: 1000px) {
+    nav ul {
+        width: 50%;
+    }
+
+    section .right .text {
+        margin-top: 60vh;
+    }
+
+    section .right .text .left-t {
+        width: 40%;
+    }
+
+    section .left button {
+        margin-bottom: 1em;
+    }
+
+    section .left .bottom {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:759px){
+    .container{
+        margin: 1% 1.6%;
+    }
+
+    nav {
+       position: fixed;
+       flex-direction: column;
+       background-color: gray;
+       height: 100%;
+       width: 100%;
+       top: 0;
+       z-index: 1;
+       justify-content: space-evenly;
+       border-radius: 10px;
+       background-color: rgba(255,255,255,0.5);
+       backdrop-filter: blur(10px);
+       margin-left: 100%;
+       opacity: 0;
+       color: #725e16;
+    }
+
+    nav ul {
+        flex-direction: column;
+        height: 40%;
+    }
+
+    nav ul li a {
+        color: #584a15;
+    }
+
+    .to-phone {
+        display: flex;
+        justify-content: space-between;
+    }
+    .burger {
+        position: static;
+        height: 10%;
+        width: 6%;
+        border: 1px solid rgba(201, 139, 23, 0.205);
+        padding: 0.5em 0.5em;
+        border-radius: 10px;
+        z-index: 10;
+    }
+
+    .contrast {
+        position: relative;
+        padding: 0.8em 29px;
+        background-color: black;
+        border-radius: 20px;
+    }
+
+    .circle {
+        position: absolute;
+        height: 85%;
+        width: 20px;
+        margin: 4% 10% 0 4px;
+        background-color: white;
+        border-radius: 50%;
+        top: 0;
+        transition: 0.9s ease;
+    }
+
+    section {
+        flex-direction: column;
+        margin-top: -10%;
+    }
+
+    section .left {
+        width: 100%;
+        order: 1;
+    }
+
+    section .right {
+        background-position-x: 42%;
+        width: 90%;
+    }
+
+    section .right .text {
+        margin-top: 60vh;
+        padding: 0 1em;
+    }
+
+    section .left .upper button {
+        width: 40%;
+        margin: 1em 1em  4em 0;
+        padding: 0.6em 1em;
+        text-align: center;
+    }
+
+    section .left .upper .dominant {
+        float: left;
+        margin-right: 2em;
+    }
+
+    section .left .bottom {
+        font-size: 0.9rem;
+    }
+
+}
